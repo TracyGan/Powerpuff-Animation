@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fea7a7;
+}
+
+.container {
+  width: 15em;
+  height: 20em;
+  border: 1px solid black;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.center {
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.blossom {
+  position: absolute;
+  height: 6.3em;
+  width: 7em;
+  background-color: #fcddc9;
+  border-radius: 50%;
+  border: 0.5px solid black;
+  top: 18%;
+  z-index: 1;
+}
+
+.eye-l,
+.eye-r {
+  width: 1.1em;
+  height: 1.1em;
+  top: 2.9em;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.eye-l {
+  left: 1.4em;
+  box-shadow: -0.01em 0em 0em 0.6em black,
+    -0.2em 0em 0em 0.8em rgb(255, 74, 140), -0.3em -0.1em 0em 1em white;
+}
+
+.eye-r {
+  right: 1.4em;
+  box-shadow: -0.01em 0em 0em 0.6em black, 0.2em 0em 0em 0.8em rgb(255, 74, 140),
+    0.3em -0.1em 0em 1em white;
+}
+
+.hair {
+  background-color: rgb(255, 170, 0);
+  height: 3.1em;
+  width: 6.9em;
+  border: 0.1px black solid;
+  border-radius: 4.9em 4.9em 0 0;
+  position: absolute;
+  top: -0.2em;
+}
+
+.hair:before,
+.hair:after {
+  position: absolute;
+  content: "";
+  border: none;
+}
+
+.hair:before {
+  border-bottom: 1.7em solid black;
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  top: 1.6em;
+  left: 0.8em;
+}
+
+.hair:after {
+  border-bottom: 1.7em solid #fcddc9;
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  top: 1.6em;
+  left: 3.2em;
+}
+
+.ribbon-l,
+.ribbon-r {
+  width: 1.7em;
+  height: 5.5em;
+  background-color: red;
+  position: absolute;
+  border: 0.5px solid black;
+}
+
+.ribbon-l {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: rotate(-15deg);
+  left: 5.5em;
+}
+
+.ribbon-r {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: rotate(15deg);
+  right: 5.5em;
+}
+
+.ribbon-l:after,
+.ribbon-r:after {
+  width: 2em;
+  height: 2em;
+  background-color: red;
+  position: absolute;
+  border: 0.5px solid black;
+  border-radius: 100%;
+}
+
+.mouth {
+  width: 1.4em;
+  height: 1em;
+  background-color: black;
+  border: 0.5px black solid;
+  position: absolute;
+  top: 74%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.mouth:before,
+.mouth:after {
+  position: absolute;
+  content: "";
+  border: none;
+}
+
+.mouth:after {
+  width: 0.95em;
+  height: 0.75em;
+  background-color: pink;
+  top: 16%;
+  left: 27%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 80%;
+  border: 0.5px solid black;
+}
+
+.dress {
+  width: 4em;
+  height: 5em;
+  background: linear-gradient(
+    rgb(255, 74, 140) 30%,
+    #000000 30%,
+    #000000 65%,
+    rgb(255, 74, 140) 65%
+  );
+  top: 45%;
+  position: absolute;
+  border-top-right-radius: 60%;
+  border-top-left-radius: 60%;
+  border: 0.5px solid black;
+  z-index: -1;
+}
+
+.hair-body {
+  width: 6em;
+  height: 7em;
+  background-color: rgb(255, 170, 0);
+  border: 0.5px solid black;
+  position: absolute;
+  top: 38%;
+  z-index: -4;
+}
+
+.arm-l:before,
+.arm-l:after,
+.arm-r:before,
+.arm-r:after {
+  position: absolute;
+  content: "";
+  border: none;
+}
+
+.arm-l,
+.arm-r {
+  height: 4.5em;
+  width: 1.4em;
+  background-color: #fcddc9;
+  border: 0.5px solid black;
+  border-radius: 50% 50% 0% 0%;
+  z-index: -3;
+  position: absolute;
+}
+
+.arm-l {
+  left: 2.8em;
+  top: 29%;
+  transform: rotate(90deg);
+  animation: wave 10s infinite;
+  transform-origin: bottom;
+  z-index: -2;
+}
+
+@keyframes wave {
+  50% {
+    transform: rotate(45deg);
+  }
+}
+
+.arm-r {
+  right: 5.5em;
+  top: 40%;
+  height: 4.6em;
+  transform: rotate(-90deg);
+}
+
+.leg-r,
+.leg-l {
+  height: 3em;
+  width: 1.8em;
+  position: absolute;
+  border: 0.5px solid black;
+  background: linear-gradient(white 60%, black 30%, black 65%);
+  top: 70%;
+  z-index: -2;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.leg-r {
+  right: 5.5em;
+}
+
+.leg-l {
+  left: 5.5em;
+}
+
+.leg-l:before,
+.leg-l:after,
+.leg-r:before,
+.leg-r:after {
+  position: absolute;
+  content: "";
+  border: none;
+}
+
+.leg-r:after,
+.leg-l:after {
+  height: 0.4em;
+  left: 18%;
+  width: 1em;
+  position: absolute;
+  background-color: white;
+  top: 72%;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 60%;
+}
